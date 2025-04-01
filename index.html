@@ -14,7 +14,7 @@
 
     <!-- Loading Animation -->
     <div id="loading" class="loading">
-        <img src="https://i.ibb.co/5WqYk2L/loading-3d-image.png" alt="Loading 3D Image" class="loading-image">
+        <div class="loading-spinner"></div>
     </div>
 
     <!-- Scroll Down Icon -->
@@ -23,7 +23,7 @@
     </div>
 
     <!-- Header Section -->
-    <header>
+    <header id="home">
         <div class="header-top">
             <span class="site-name">Sung Jin Woo</span>
             <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
@@ -39,22 +39,26 @@
     <section class="about-me" id="about">
         <h2>ABOUT ME</h2>
         <button class="purple-btn" onclick="showLoading('about-modal')">About</button>
-        <img src="https://i.ibb.co/5WqYk2L/person-with-wine.jpg" alt="Person with Wine" class="about-me-image">
+        <div class="spacer"></div>
+        <img src="https://images.unsplash.com/photo-1519125323398-675f1f1d1f1d?q=80&w=2070&auto=format&fit=crop&grayscale" alt="Person with Wine" class="about-me-image">
         <div class="about-details">
             <div class="detail-box">
                 <span class="icon">👤</span>
                 <p>NAME</p>
                 <p>Sung Jin Woo</p>
+                <p class="custom-text">ꜱᴜɴɢ ᴊɪɴᴡᴏᴏ 𝜩 [ℵ]</p>
             </div>
             <div class="detail-box">
                 <span class="icon">🌍</span>
                 <p>COUNTRY, STATE</p>
                 <p>India, Haryana</p>
+                <p class="custom-text">ɪɴᴅɪᴀɴ ꜱʜᴀᴅᴏᴡ 𝜩</p>
             </div>
             <div class="detail-box">
                 <span class="icon">📅</span>
                 <p>AGE</p>
                 <p>18</p>
+                <p class="custom-text">ʏᴏᴜɴɢ ᴍᴏɴᴀʀᴄʜ 𝜩</p>
             </div>
         </div>
         <p class="bio">Hello, Buddy! I Am Sung Jin Woo From Seoul. Creator Of The Sung Jin Woo Network.</p>
@@ -68,17 +72,17 @@
         <a href="https://t.me/SUNG_JIN_WOO_791/60"><button class="purple-btn">See All</button></a>
         <div class="member-container">
             <div class="member active">
-                <img src="https://i.ibb.co/5WqYk2L/user-icon.png" alt="Member Avatar">
+                <img src="https://images.unsplash.com/photo-1574158622682-0f9b4d406c2a?q=80&w=2070&auto=format&fit=crop" alt="Member Avatar">
                 <div class="member-info">
-                    <h4>nobody_knows_792</h4>
+                    <h4>𓆩Nᴏʙᴏᴅʏ✘⁣Kɴᴏᴡs𓆪</h4>
                     <p>Partner in the Shadow Monarch Group. Managing Members.</p>
                 </div>
             </div>
             <div class="member">
-                <img src="https://i.ibb.co/5WqYk2L/user-icon.png" alt="Member Avatar">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" alt="Member Avatar">
                 <div class="member-info">
-                    <h4>Mazino (Rushil)</h4>
-                    <p>Owner of The Hell's Writing Group, Co-owner of TSS GC. Managing Members.</p>
+                    <h4>Rᴀᴍʜɪᴋᴀ 𝜩</h4>
+                    <p>A special for me. My guiding light in the shadows.</p>
                 </div>
             </div>
         </div>
@@ -99,19 +103,19 @@
             <button class="tab" onclick="showLoading('bot-modal')">Bot</button>
         </div>
         <div class="work" data-category="all channel">
-            <img src="https://i.ibb.co/7WqYk2L/shadow-monarch-legacy.jpg" alt="Work Image">
+            <img src="https://images.alphacoders.com/132/1321234.jpg" alt="Shadow Monarch Legacy Channel">
             <p>Shadow Monarch Legacy Channel</p>
             <a href="https://t.me/chilling_friends_support"><button class="purple-btn">Use Channel</button></a>
         </div>
         <div class="work" data-category="all group">
-            <img src="https://graph.org/file/b8bf02d4196f9b00cd1a7-0f233b883728719f58.jpg" alt="Work Image">
+            <img src="https://graph.org/file/b8bf02d4196f9b00cd1a7-0f233b883728719f58.jpg" alt="Shadow Army Group">
             <p>Shadow Army Group</p>
             <a href="https://t.me/+s4LqOJ1K5_s2NDc1"><button class="purple-btn">Use Group</button></a>
         </div>
         <div class="work" data-category="all bot">
-            <img src="https://graph.org/file/50d92b448e1936c87112e-5930243aa039485387.jpg" alt="Work Image">
+            <img src="https://graph.org/file/50d92b448e1936c87112e-5930243aa039485387.jpg" alt="Igris Bot">
             <p>Igris Bot</p>
-            <a href="https://t.me/Sung_jin_woo_79"><button class="purple-btn">Use Bot</button></a>
+            <button class="purple-btn" onclick="showLoading('bot-list-modal')">Use Bot</button>
         </div>
     </section>
 
@@ -124,13 +128,13 @@
         </div>
     </section>
 
-    <!-- Additional Section (Movie Night) -->
+    <!-- Additional Section (Anime Hub) -->
     <section class="additional-section">
         <h2>LET'S JOIN US!</h2>
-        <h3>MOVIE NIGHT</h3>
+        <h3>ANIME HUB</h3>
         <p>Movies | Web Series | Anime Channel</p>
         <div class="additional-content">
-            <a href="https://t.me/+s4LqOJ1K5_s2NDc1"><img src="https://i.ibb.co/5WqYk2L/movie-night.jpg" alt="Movie Night Image"></a>
+            <a href="https://t.me/TOP_RATED_ANIME_UPLOADER_791"><img src="https://images.alphacoders.com/132/1321235.jpg" alt="Anime Hub Image"></a>
         </div>
     </section>
 
@@ -148,14 +152,15 @@
             <a href="https://t.me/Sung_jin_woo_79"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram"></a>
         </div>
         <p>© 2025 BY SUNG JIN WOO. ALL RIGHTS RESERVED.</p>
+        <div class="footer-spacer"></div>
     </footer>
 
     <!-- Fixed Bottom Navigation -->
     <nav class="bottom-nav">
-        <a href="#home" onclick="scrollToSection('home')"><img src="https://i.ibb.co/5WqYk2L/home-icon.png" alt="Home Icon"></a>
-        <a href="#about" onclick="scrollToSection('about')"><img src="https://i.ibb.co/5WqYk2L/person-icon.png" alt="Person Icon"></a>
-        <a href="#portfolio" onclick="scrollToSection('portfolio')"><img src="https://i.ibb.co/5WqYk2L/bag-icon.png" alt="Bag Icon"></a>
-        <a href="#" onclick="showLoading('bot-list-modal')"><img src="https://i.ibb.co/5WqYk2L/medal-icon.png" alt="Medal Icon"></a>
+        <a href="#home" onclick="scrollToTop()"><img src="https://cdn-icons-png.flaticon.com/512/1946/1946433.png" alt="Home Icon"></a>
+        <a href="#about" onclick="scrollToSection('about')"><img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="Person Icon"></a>
+        <a href="#portfolio" onclick="scrollToSection('portfolio')"><img src="https://cdn-icons-png.flaticon.com/512/891/891462.png" alt="Bag Icon"></a>
+        <a href="#" onclick="showLoading('bot-list-modal')"><img src="https://cdn-icons-png.flaticon.com/512/1791/1791358.png" alt="Medal Icon"></a>
     </nav>
 
     <!-- Modals -->
@@ -164,7 +169,7 @@
             <span class="close" onclick="closeModal('about-modal')">×</span>
             <h2>About Sung Jin Woo</h2>
             <p>I am the Shadow Monarch, ruler of the shadows and creator of the Sung Jin Woo Network. Join me on my journey to conquer all challenges!</p>
-            <img src="https://i.ibb.co/5WqYk2L/sung-jin-woo-about.jpg" alt="Sung Jin Woo">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f1f1d1f1d?q=80&w=2070&auto=format&fit=crop&grayscale" alt="Sung Jin Woo">
         </div>
     </div>
 
@@ -173,7 +178,9 @@
             <span class="close" onclick="closeModal('channel-modal')">×</span>
             <h2>Shadow Monarch Channels</h2>
             <p>Join my Telegram channels for updates on the Shadow Monarch Legacy!</p>
-            <img src="https://i.ibb.co/5WqYk2L/channel-image.jpg" alt="Channel Image">
+            <div class="modal-image-container">
+                <img src="https://images.alphacoders.com/132/1321234.jpg" alt="Channel Image">
+            </div>
             <a href="https://t.me/chilling_friends_support"><button class="purple-btn">Join Us</button></a>
         </div>
     </div>
@@ -183,7 +190,9 @@
             <span class="close" onclick="closeModal('group-modal')">×</span>
             <h2>Shadow Army Groups</h2>
             <p>Be part of the Shadow Army! Join our Telegram groups to connect with other fans.</p>
-            <img src="https://graph.org/file/b8bf02d4196f9b00cd1a7-0f233b883728719f58.jpg" alt="Group Image">
+            <div class="modal-image-container">
+                <img src="https://graph.org/file/b8bf02d4196f9b00cd1a7-0f233b883728719f58.jpg" alt="Group Image">
+            </div>
             <a href="https://t.me/+s4LqOJ1K5_s2NDc1"><button class="purple-btn">Join Us</button></a>
         </div>
     </div>
@@ -193,11 +202,10 @@
             <span class="close" onclick="closeModal('bot-modal')">×</span>
             <h2>Bots</h2>
             <p>Meet my loyal bots! Use them to get updates and interact with the community.</p>
-            <img src="https://graph.org/file/50d92b448e1936c87112e-5930243aa039485387.jpg" alt="Bot Image">
-            <ul class="bot-list">
-                <li>Igris Bot - <a href="https://t.me/Sung_jin_woo_79">Try Now</a></li>
-                <li>Madara Chat Bot - <a href="https://t.me/Madara7_chat_bot">Try Now</a></li>
-            </ul>
+            <div class="modal-image-container">
+                <img src="https://graph.org/file/50d92b448e1936c87112e-5930243aa039485387.jpg" alt="Bot Image">
+            </div>
+            <button class="purple-btn" onclick="showLoading('bot-list-modal')">Use Bot</button>
         </div>
     </div>
 
@@ -205,11 +213,12 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('bot-list-modal')">×</span>
             <h2>Bot List</h2>
-            <p>Explore all the bots in the Sung Jin Woo Network!</p>
-            <ul class="bot-list">
-                <li>Igris Bot - <a href="https://t.me/Sung_jin_woo_79">Try Now</a></li>
-                <li>Madara Chat Bot - <a href="https://t.me/Madara7_chat_bot">Try Now</a></li>
-            </ul>
+            <div class="bot-item">
+                <img src="https://graph.org/file/50d92b448e1936c87112e-5930243aa039485387.jpg" alt="Madara Chat Bot">
+                <h4>Madara Chat Bot</h4>
+                <p>Madara Chat Bot - Your fiery companion for epic conversations!</p>
+                <a href="https://t.me/Madara7_chat_bot"><button class="purple-btn">Check</button></a>
+            </div>
         </div>
     </div>
 

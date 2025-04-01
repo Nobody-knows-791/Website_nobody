@@ -1,73 +1,74 @@
-// Show all works by default
-document.addEventListener('DOMContentLoaded', () => {
-    const works = document.querySelectorAll('.work');
-    works.forEach(work => work.classList.add('active'));
-});
+// Loading Animation
+window.onload = function() {
+    setTimeout(() => {
+        document.getElementById('loading').style.display = 'none';
+    }, 1500);
+};
 
-// Modal Functions with Loading Animation
 function showLoading(modalId) {
     const loading = document.getElementById('loading');
     loading.style.display = 'flex';
     setTimeout(() => {
         loading.style.display = 'none';
-        openModal(modalId);
-    }, 2000); // 2-second delay for the loading animation
-}
-
-function openModal(modalId) {
-    document.getElementById(modalId).style.display = 'flex';
-}
-
-function closeModal(modalId) {
-    document.getElementById(modalId).style.display = 'none';
+        document.getElementById(modalId).style.display = 'flex';
+    }, 1500);
 }
 
 // Theme Toggle
 function toggleTheme() {
-    document.body.classList.toggle('bright-theme');
+    document.body.classList.toggle('light-theme');
 }
 
-// Swipe Functionality for Friend Profiles
-let currentIndex = 0;
-const members = document.querySelectorAll('.member');
-const dots = document.querySelectorAll('.dot');
+// Modal Functions
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+}
 
-function showMember(index) {
-    members.forEach((member, i) => {
-        member.classList.remove('active');
-        dots[i].classList.remove('active');
-        if (i === index) {
-            member.classList.add('active');
-            dots[i].classList.add('active');
+// Portfolio Filter
+function filterWorks(category) {
+    const works = document.querySelectorAll('.work');
+    const tabs = document.querySelectorAll('.tab');
+    
+    tabs.forEach(tab => tab.classList.remove('active'));
+    event.target.classList.add('active');
+    
+    works.forEach(work => {
+        if (category === 'all' || work.getAttribute('data-category').includes(category)) {
+            work.style.display = 'block';
+        } else {
+            work.style.display = 'none';
         }
     });
 }
 
-const memberContainer = document.querySelector('.member-container');
-let touchStartX = 0;
-let touchEndX = 0;
+// Friend Circle Slider
+let currentMember = 0;
+const members = document.querySelectorAll('.member');
+const dots = document.querySelectorAll('.dot');
 
-memberContainer.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
+function showMember(index) {
+    members.forEach(member => member.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    members[index].classList.add('active');
+    dots[index].classList.add('active');
+    currentMember = index;
+}
+
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => showMember(index));
 });
 
-memberContainer.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    if (touchStartX - touchEndX > 50) {
-        // Swipe left
-        currentIndex = (currentIndex + 1) % members.length;
-        showMember(currentIndex);
-    } else if (touchEndX - touchStartX > 50) {
-        // Swipe right
-        currentIndex = (currentIndex - 1 + members.length) % members.length;
-        showMember(currentIndex);
-    }
-});
+setInterval(() => {
+    currentMember = (currentMember + 1) % members.length;
+    showMember(currentMember);
+}, 5000);
 
-// Smooth Scrolling for Navigation Links
+// Scroll to Section
 function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-    }
+    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+}
+
+// Scroll to Top
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
