@@ -12,7 +12,7 @@
     <header>
         <h1>SUNG JIN WOO</h1>
         <p>TELEGRAM NETWORK</p>
-        <button class="purple-btn">About</button>
+        <button class="purple-btn" onclick="openModal('about-modal')">About</button>
     </header>
 
     <!-- About Me Section -->
@@ -42,7 +42,7 @@
         <h3>SHADOW CIRCLE</h3>
         <a href="https://t.me/Sung_jin_woo_79"><button class="purple-btn">See All</button></a>
         <div class="member">
-            <img src="https://i.imgur.com/5f5z5z5.jpg" alt="Member Avatar">
+            <img src="https://i.ibb.co/5WqYk2L/cha-hae-in.jpg" alt="Member Avatar">
             <div class="member-info">
                 <h4>nobody_knows_792</h4>
                 <p>Partner in the Shadow Monarch Group. Managing Members.</p>
@@ -55,14 +55,22 @@
         <h2>MY PORTFOLIO</h2>
         <h3>RECENT WORKS</h3>
         <div class="tabs">
-            <button class="tab active">ALL</button>
-            <button class="tab">Channel</button>
-            <button class="tab">Group</button>
-            <button class="tab">Bot</button>
+            <button class="tab active" onclick="filterWorks('all')">ALL</button>
+            <button class="tab" onclick="openModal('channel-modal')">Channel</button>
+            <button class="tab" onclick="openModal('group-modal')">Group</button>
+            <button class="tab" onclick="openModal('bot-modal')">Bot</button>
         </div>
-        <div class="work">
-            <img src="https://i.imgur.com/8z5z5z5.jpg" alt="Work Image">
-            <p>Shadow Monarch Legacy</p>
+        <div class="work" data-category="all channel">
+            <img src="https://i.ibb.co/7WqYk2L/shadow-monarch-legacy.jpg" alt="Work Image">
+            <p>Shadow Monarch Legacy Channel</p>
+        </div>
+        <div class="work" data-category="all group">
+            <img src="https://i.ibb.co/5WqYk2L/shadow-army.jpg" alt="Work Image">
+            <p>Shadow Army Group</p>
+        </div>
+        <div class="work" data-category="all bot">
+            <img src="https://i.ibb.co/5WqYk2L/igris-bot.jpg" alt="Work Image">
+            <p>Igris Bot</p>
         </div>
     </section>
 
@@ -70,7 +78,7 @@
     <section class="sticker-packs">
         <h2>STICKER PACKS</h2>
         <div class="sticker">
-            <img src="https://i.imgur.com/9z5z5z5.jpg" alt="Sticker Pack">
+            <img src="https://i.ibb.co/5WqYk2L/sticker-pack.jpg" alt="Sticker Pack">
         </div>
     </section>
 
@@ -80,16 +88,16 @@
         <h3>MOVIE NIGHT</h3>
         <p>Movies | Web Series | Anime Channel</p>
         <div class="additional-content">
-            <a href="https://t.me/+s4LqOJ1K5_s2NDc1"><img src="https://i.imgur.com/7z5z5z5.jpg" alt="Movie Night Image"></a>
+            <a href="https://t.me/+s4LqOJ1K5_s2NDc1"><img src="https://i.ibb.co/5WqYk2L/movie-night.jpg" alt="Movie Night Image"></a>
         </div>
     </section>
 
     <!-- Footer Navigation -->
     <nav class="bottom-nav">
-        <a href="#home"><img src="https://i.imgur.com/1z5z5z5.png" alt="Home Icon"></a>
-        <a href="#about"><img src="https://i.imgur.com/2z5z5z5.png" alt="About Icon"></a>
-        <a href="#work"><img src="https://i.imgur.com/3z5z5z5.png" alt="Work Icon"></a>
-        <a href="#team"><img src="https://i.imgur.com/4z5z5z5.png" alt="Team Icon"></a>
+        <a href="#home"><img src="https://i.ibb.co/5WqYk2L/home-icon.png" alt="Home Icon"></a>
+        <a href="#about"><img src="https://i.ibb.co/5WqYk2L/about-icon.png" alt="About Icon"></a>
+        <a href="#work"><img src="https://i.ibb.co/5WqYk2L/work-icon.png" alt="Work Icon"></a>
+        <a href="#team"><img src="https://i.ibb.co/5WqYk2L/team-icon.png" alt="Team Icon"></a>
     </nav>
 
     <!-- Footer -->
@@ -102,10 +110,52 @@
             <a href="#team">Team</a>
         </div>
         <div class="social-icons">
-            <a href="https://www.instagram.com/nobody_knows_792?igsh=MTFmY3FjcWgwOXRuNg=="><img src="https://i.imgur.com/6z5z5z5.png" alt="Instagram"></a>
-            <a href="https://t.me/Sung_jin_woo_79"><img src="https://i.imgur.com/5z5z5z5.png" alt="Telegram"></a>
+            <a href="https://www.instagram.com/nobody_knows_792?igsh=MTFmY3FjcWgwOXRuNg=="><img src="https://i.ibb.co/5WqYk2L/instagram-icon.png" alt="Instagram"></a>
+            <a href="https://t.me/Sung_jin_woo_79"><img src="https://i.ibb.co/5WqYk2L/telegram-icon.png" alt="Telegram"></a>
         </div>
         <p>© 2025 BY SUNG JIN WOO. ALL RIGHTS RESERVED.</p>
     </footer>
+
+    <!-- Modals -->
+    <div id="about-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('about-modal')">×</span>
+            <h2>About Sung Jin Woo</h2>
+            <p>I am the Shadow Monarch, ruler of the shadows and creator of the Sung Jin Woo Network. Join me on my journey to conquer all challenges!</p>
+            <img src="https://i.ibb.co/5WqYk2L/sung-jin-woo-about.jpg" alt="Sung Jin Woo">
+        </div>
+    </div>
+
+    <div id="channel-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('channel-modal')">×</span>
+            <h2>Shadow Monarch Channels</h2>
+            <p>Join my Telegram channels for updates on the Shadow Monarch Legacy!</p>
+            <a href="https://t.me/Sung_jin_woo_79"><button class="purple-btn">Join Channel</button></a>
+            <img src="https://i.ibb.co/5WqYk2L/channel-image.jpg" alt="Channel Image">
+        </div>
+    </div>
+
+    <div id="group-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('group-modal')">×</span>
+            <h2>Shadow Army Groups</h2>
+            <p>Be part of the Shadow Army! Join our Telegram groups to connect with other fans.</p>
+            <a href="https://t.me/Sung_jin_woo_79"><button class="purple-btn">Join Group</button></a>
+            <img src="https://i.ibb.co/5WqYk2L/group-image.jpg" alt="Group Image">
+        </div>
+    </div>
+
+    <div id="bot-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('bot-modal')">×</span>
+            <h2>Igris Bot</h2>
+            <p>Meet Igris, my loyal bot! Use it to get updates and interact with the community.</p>
+            <a href="https://t.me/Sung_jin_woo_79"><button class="purple-btn">Try Bot</button></a>
+            <img src="https://i.ibb.co/5WqYk2L/igris-bot-image.jpg" alt="Bot Image">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
