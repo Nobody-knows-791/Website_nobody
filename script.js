@@ -2,7 +2,7 @@
 window.onload = function() {
     setTimeout(() => {
         document.getElementById('loading').style.display = 'none';
-    }, 1000); // Reduced to 1 second
+    }, 1000);
 };
 
 function showLoading(modalId) {
@@ -11,7 +11,7 @@ function showLoading(modalId) {
     setTimeout(() => {
         loading.style.display = 'none';
         document.getElementById(modalId).style.display = 'flex';
-    }, 1000); // Reduced to 1 second
+    }, 1000);
 }
 
 // Theme Toggle
