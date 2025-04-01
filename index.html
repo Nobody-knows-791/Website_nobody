@@ -40,23 +40,24 @@
         <h2>ABOUT ME</h2>
         <button class="purple-btn" onclick="showLoading('about-modal')">About</button>
         <div class="spacer"></div>
-        <img src="https://images.unsplash.com/photo-1519125323398-675f1f1d1f1d?q=80&w=2070&auto=format&fit=crop&grayscale" alt="Person with Wine" class="about-me-image">
+        <!-- Adding Photo W below the About Me button -->
+        <img src="path-to-photo-w.jpg" alt="Sung Jin Woo Photo" class="about-me-image">
         <div class="about-details">
             <div class="detail-box">
                 <span class="icon">👤</span>
-                <p>NAME</p>
+                <p class="label">NAME</p>
                 <p>Sung Jin Woo</p>
                 <p class="custom-text">ꜱᴜɴɢ ᴊɪɴᴡᴏᴏ 𝜩 [ℵ]</p>
             </div>
             <div class="detail-box">
                 <span class="icon">🌍</span>
-                <p>COUNTRY, STATE</p>
+                <p class="label">COUNTRY, STATE</p>
                 <p>India, Haryana</p>
                 <p class="custom-text">ɪɴᴅɪᴀɴ ꜱʜᴀᴅᴏᴡ 𝜩</p>
             </div>
             <div class="detail-box">
                 <span class="icon">📅</span>
-                <p>AGE</p>
+                <p class="label">AGE</p>
                 <p>18</p>
                 <p class="custom-text">ʏᴏᴜɴɢ ᴍᴏɴᴀʀᴄʜ 𝜩</p>
             </div>
@@ -72,21 +73,21 @@
         <a href="https://t.me/SUNG_JIN_WOO_791/60"><button class="purple-btn">See All</button></a>
         <div class="member-container">
             <div class="member active">
-                <img src="https://images.unsplash.com/photo-1574158622682-0f9b4d406c2a?q=80&w=2070&auto=format&fit=crop" alt="Member Avatar">
+                <span class="member-emoji">👤</span>
                 <div class="member-info">
                     <h4>𓆩Nᴏʙᴏᴅʏ✘⁣Kɴᴏᴡs𓆪</h4>
                     <p>Partner in the Shadow Monarch Group. Managing Members.</p>
                 </div>
             </div>
             <div class="member">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" alt="Member Avatar">
+                <span class="member-emoji">🌸</span>
                 <div class="member-info">
                     <h4>Rᴀᴍʜɪᴋᴀ 𝜩</h4>
                     <p>A special for me. My guiding light in the shadows.</p>
                 </div>
             </div>
         </div>
-        <div class="dots">
+        <div class="dots-container">
             <span class="dot active"></span>
             <span class="dot"></span>
         </div>
@@ -103,17 +104,17 @@
             <button class="tab" onclick="showLoading('bot-modal')">Bot</button>
         </div>
         <div class="work" data-category="all channel">
-            <img src="https://images.alphacoders.com/132/1321234.jpg" alt="Shadow Monarch Legacy Channel">
+            <img src="https://via.placeholder.com/300x200.png?text=Shadow+Monarch+Legacy+Channel" alt="Shadow Monarch Legacy Channel">
             <p>Shadow Monarch Legacy Channel</p>
             <a href="https://t.me/chilling_friends_support"><button class="purple-btn">Use Channel</button></a>
         </div>
         <div class="work" data-category="all group">
-            <img src="https://graph.org/file/b8bf02d4196f9b00cd1a7-0f233b883728719f58.jpg" alt="Shadow Army Group">
+            <img src="https://via.placeholder.com/300x200.png?text=Shadow+Army+Group" alt="Shadow Army Group">
             <p>Shadow Army Group</p>
             <a href="https://t.me/+s4LqOJ1K5_s2NDc1"><button class="purple-btn">Use Group</button></a>
         </div>
         <div class="work" data-category="all bot">
-            <img src="https://graph.org/file/50d92b448e1936c87112e-5930243aa039485387.jpg" alt="Igris Bot">
+            <img src="https://via.placeholder.com/300x200.png?text=Igris+Bot" alt="Igris Bot">
             <p>Igris Bot</p>
             <button class="purple-btn" onclick="showLoading('bot-list-modal')">Use Bot</button>
         </div>
@@ -123,7 +124,7 @@
     <section class="sticker-packs">
         <h2>STICKER PACKS</h2>
         <div class="sticker">
-            <img src="https://graph.org/file/b747920595944e47ef0d2-fa14fe47db24487db0.jpg" alt="Sticker Pack">
+            <img src="https://via.placeholder.com/300x200.png?text=Sticker+Pack" alt="Sticker Pack">
             <a href="https://t.me/stickers_791"><button class="purple-btn">Join</button></a>
         </div>
     </section>
@@ -134,7 +135,7 @@
         <h3>ANIME HUB</h3>
         <p>Movies | Web Series | Anime Channel</p>
         <div class="additional-content">
-            <a href="https://t.me/TOP_RATED_ANIME_UPLOADER_791"><img src="https://images.alphacoders.com/132/1321235.jpg" alt="Anime Hub Image"></a>
+            <a href="https://t.me/TOP_RATED_ANIME_UPLOADER_791"><img src="https://via.placeholder.com/500x300.png?text=Anime+Hub" alt="Anime Hub Image"></a>
         </div>
     </section>
 
@@ -157,10 +158,10 @@
 
     <!-- Fixed Bottom Navigation -->
     <nav class="bottom-nav">
-        <a href="#home" onclick="scrollToTop()"><img src="https://cdn-icons-png.flaticon.com/512/1946/1946433.png" alt="Home Icon"></a>
-        <a href="#about" onclick="scrollToSection('about')"><img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="Person Icon"></a>
-        <a href="#portfolio" onclick="scrollToSection('portfolio')"><img src="https://cdn-icons-png.flaticon.com/512/891/891462.png" alt="Bag Icon"></a>
-        <a href="#" onclick="showLoading('bot-list-modal')"><img src="https://cdn-icons-png.flaticon.com/512/1791/1791358.png" alt="Medal Icon"></a>
+        <a href="#home" onclick="scrollToTop()" class="nav-item active"><img src="https://cdn-icons-png.flaticon.com/512/1946/1946433.png" alt="Home Icon"></a>
+        <a href="#about" onclick="scrollToSection('about')" class="nav-item"><img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="Person Icon"></a>
+        <a href="#portfolio" onclick="scrollToSection('portfolio')" class="nav-item"><img src="https://cdn-icons-png.flaticon.com/512/891/891462.png" alt="Bag Icon"></a>
+        <a href="#" onclick="showLoading('bot-list-modal')" class="nav-item"><img src="https://cdn-icons-png.flaticon.com/512/1791/1791358.png" alt="Medal Icon"></a>
     </nav>
 
     <!-- Modals -->
@@ -169,7 +170,7 @@
             <span class="close" onclick="closeModal('about-modal')">×</span>
             <h2>About Sung Jin Woo</h2>
             <p>I am the Shadow Monarch, ruler of the shadows and creator of the Sung Jin Woo Network. Join me on my journey to conquer all challenges!</p>
-            <img src="https://images.unsplash.com/photo-1519125323398-675f1f1d1f1d?q=80&w=2070&auto=format&fit=crop&grayscale" alt="Sung Jin Woo">
+            <img src="https://via.placeholder.com/300x200.png?text=Sung+Jin+Woo" alt="Sung Jin Woo">
         </div>
     </div>
 
@@ -179,7 +180,7 @@
             <h2>Shadow Monarch Channels</h2>
             <p>Join my Telegram channels for updates on the Shadow Monarch Legacy!</p>
             <div class="modal-image-container">
-                <img src="https://images.alphacoders.com/132/1321234.jpg" alt="Channel Image">
+                <img src="https://via.placeholder.com/300x200.png?text=Shadow+Monarch+Channel" alt="Channel Image">
             </div>
             <a href="https://t.me/chilling_friends_support"><button class="purple-btn">Join Us</button></a>
         </div>
@@ -191,7 +192,7 @@
             <h2>Shadow Army Groups</h2>
             <p>Be part of the Shadow Army! Join our Telegram groups to connect with other fans.</p>
             <div class="modal-image-container">
-                <img src="https://graph.org/file/b8bf02d4196f9b00cd1a7-0f233b883728719f58.jpg" alt="Group Image">
+                <img src="https://via.placeholder.com/300x200.png?text=Shadow+Army+Group" alt="Group Image">
             </div>
             <a href="https://t.me/+s4LqOJ1K5_s2NDc1"><button class="purple-btn">Join Us</button></a>
         </div>
@@ -203,7 +204,7 @@
             <h2>Bots</h2>
             <p>Meet my loyal bots! Use them to get updates and interact with the community.</p>
             <div class="modal-image-container">
-                <img src="https://graph.org/file/50d92b448e1936c87112e-5930243aa039485387.jpg" alt="Bot Image">
+                <img src="https://via.placeholder.com/300x200.png?text=Igris+Bot" alt="Bot Image">
             </div>
             <button class="purple-btn" onclick="showLoading('bot-list-modal')">Use Bot</button>
         </div>
@@ -214,7 +215,7 @@
             <span class="close" onclick="closeModal('bot-list-modal')">×</span>
             <h2>Bot List</h2>
             <div class="bot-item">
-                <img src="https://graph.org/file/50d92b448e1936c87112e-5930243aa039485387.jpg" alt="Madara Chat Bot">
+                <img src="https://via.placeholder.com/200x150.png?text=Madara+Chat+Bot" alt="Madara Chat Bot">
                 <h4>Madara Chat Bot</h4>
                 <p>Madara Chat Bot - Your fiery companion for epic conversations!</p>
                 <a href="https://t.me/Madara7_chat_bot"><button class="purple-btn">Check</button></a>

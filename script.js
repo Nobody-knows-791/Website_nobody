@@ -2,7 +2,7 @@
 window.onload = function() {
     setTimeout(() => {
         document.getElementById('loading').style.display = 'none';
-    }, 1500);
+    }, 1000); // Reduced to 1 second
 };
 
 function showLoading(modalId) {
@@ -11,12 +11,14 @@ function showLoading(modalId) {
     setTimeout(() => {
         loading.style.display = 'none';
         document.getElementById(modalId).style.display = 'flex';
-    }, 1500);
+    }, 1000); // Reduced to 1 second
 }
 
 // Theme Toggle
 function toggleTheme() {
     document.body.classList.toggle('light-theme');
+    const themeToggle = document.querySelector('.theme-toggle');
+    themeToggle.textContent = document.body.classList.contains('light-theme') ? '🌞' : '🌙';
 }
 
 // Modal Functions
