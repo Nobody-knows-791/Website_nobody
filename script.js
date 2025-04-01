@@ -1,34 +1,25 @@
-// Filter Works for the "ALL" button
-function filterWorks(category) {
+// Show all works by default
+document.addEventListener('DOMContentLoaded', () => {
     const works = document.querySelectorAll('.work');
-    const tabs = document.querySelectorAll('.tab');
+    works.forEach(work => work.classList.add('active'));
+});
 
-    // Remove active class from all tabs
-    tabs.forEach(tab => tab.classList.remove('active'));
-    
-    // Add active class to the clicked tab
-    event.target.classList.add('active');
-
-    // Show/hide works based on category
-    works.forEach(work => {
-        if (category === 'all' || work.getAttribute('data-category').includes(category)) {
-            work.classList.add('active');
-        } else {
-            work.classList.remove('active');
-        }
-    });
-}
-
-// Modal Functions for "Channel," "Group," and "Bot" buttons
+// Modal Functions
 function openModal(modalId) {
     document.getElementById(modalId).style.display = 'flex';
 }
 
 function closeModal(modalId) {
     document.getElementById(modalId).style.display = 'none';
+    document.getElementById('loading').style.display = 'none';
 }
 
-// Show all works by default when the page loads
-document.addEventListener('DOMContentLoaded', () => {
-    filterWorks('all');
-});
+// Loading Animation
+function showLoading(modalId) {
+    const loading = document.getElementById('loading');
+    loading.style.display = 'flex';
+    setTimeout(() => {
+        loading.style.display = 'none';
+        openModal(modalId);
+    }, 2000); // Show loading for 2 seconds
+}

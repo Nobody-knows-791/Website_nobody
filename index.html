@@ -8,11 +8,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Loading Animation -->
+    <div id="loading" class="loading">
+        <img src="https://i.ibb.co/5WqYk2L/loading-3d.png" alt="Loading" class="loading-img">
+    </div>
+
     <!-- Header Section -->
     <header>
         <h1>SUNG JIN WOO</h1>
         <p>TELEGRAM NETWORK</p>
-        <button class="purple-btn" onclick="openModal('about-modal')">About</button>
+        <button class="purple-btn" onclick="showLoading('about-modal')">About</button>
     </header>
 
     <!-- About Me Section -->
@@ -33,6 +38,7 @@
             </div>
         </div>
         <p class="bio">Hello, Buddy! I Am Sung Jin Woo From Seoul. Creator Of The Sung Jin Woo Network.</p>
+        <img src="https://i.ibb.co/5WqYk2L/about-me-image.jpg" alt="About Me Image" class="about-me-img">
         <a href="https://t.me/Sung_jin_woo_79"><button class="purple-btn">Contact Me</button></a>
     </section>
 
@@ -55,10 +61,10 @@
         <h2>MY PORTFOLIO</h2>
         <h3>RECENT WORKS</h3>
         <div class="tabs">
-            <button class="tab active" onclick="filterWorks('all')">ALL</button>
-            <button class="tab" onclick="openModal('channel-modal')">Channel</button>
-            <button class="tab" onclick="openModal('group-modal')">Group</button>
-            <button class="tab" onclick="openModal('bot-modal')">Bot</button>
+            <button class="tab active">ALL</button>
+            <button class="tab" onclick="showLoading('channel-modal')">Channel</button>
+            <button class="tab" onclick="showLoading('group-modal')">Group</button>
+            <button class="tab" onclick="showLoading('bot-modal')">Bot</button>
         </div>
         <div class="work" data-category="all channel">
             <img src="https://i.ibb.co/7WqYk2L/shadow-monarch-legacy.jpg" alt="Work Image">
@@ -78,7 +84,8 @@
     <section class="sticker-packs">
         <h2>STICKER PACKS</h2>
         <div class="sticker">
-            <img src="https://i.ibb.co/5WqYk2L/sticker-pack.jpg" alt="Sticker Pack">
+            <img src="https://graph.org/file/b747920595944e47ef0d2-fa14fe47db24487db0.jpg" alt="Sticker Pack">
+            <a href="https://t.me/stickers_791"><button class="purple-btn">Join</button></a>
         </div>
     </section>
 
@@ -110,8 +117,8 @@
             <a href="#team">Team</a>
         </div>
         <div class="social-icons">
-            <a href="https://www.instagram.com/nobody_knows_792?igsh=MTFmY3FjcWgwOXRuNg=="><img src="https://i.ibb.co/5WqYk2L/instagram-icon.png" alt="Instagram"></a>
-            <a href="https://t.me/Sung_jin_woo_79"><img src="https://i.ibb.co/5WqYk2L/telegram-icon.png" alt="Telegram"></a>
+            <a href="instagram://user?username=nobody_knows_792" onclick="window.location.href='https://www.instagram.com/nobody_knows_792?igsh=MTFmY3FjcWgwOXRuNg=='"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+            <a href="https://t.me/Sung_jin_woo_79"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram"></a>
         </div>
         <p>© 2025 BY SUNG JIN WOO. ALL RIGHTS RESERVED.</p>
     </footer>
@@ -131,8 +138,8 @@
             <span class="close" onclick="closeModal('channel-modal')">×</span>
             <h2>Shadow Monarch Channels</h2>
             <p>Join my Telegram channels for updates on the Shadow Monarch Legacy!</p>
-            <a href="https://t.me/Sung_jin_woo_79"><button class="purple-btn">Join Channel</button></a>
             <img src="https://i.ibb.co/5WqYk2L/channel-image.jpg" alt="Channel Image">
+            <a href="https://t.me/chilling_friends_support"><button class="purple-btn">Join Us</button></a>
         </div>
     </div>
 
@@ -141,8 +148,8 @@
             <span class="close" onclick="closeModal('group-modal')">×</span>
             <h2>Shadow Army Groups</h2>
             <p>Be part of the Shadow Army! Join our Telegram groups to connect with other fans.</p>
-            <a href="https://t.me/Sung_jin_woo_79"><button class="purple-btn">Join Group</button></a>
-            <img src="https://i.ibb.co/5WqYk2L/group-image.jpg" alt="Group Image">
+            <img src="https://graph.org/file/b8bf02d4196f9b00cd1a7-0f233b883728719f58.jpg" alt="Group Image">
+            <a href="https://t.me/+s4LqOJ1K5_s2NDc1"><button class="purple-btn">Join Us</button></a>
         </div>
     </div>
 
@@ -151,8 +158,10 @@
             <span class="close" onclick="closeModal('bot-modal')">×</span>
             <h2>Igris Bot</h2>
             <p>Meet Igris, my loyal bot! Use it to get updates and interact with the community.</p>
-            <a href="https://t.me/Sung_jin_woo_79"><button class="purple-btn">Try Bot</button></a>
-            <img src="https://i.ibb.co/5WqYk2L/igris-bot-image.jpg" alt="Bot Image">
+            <img src="https://graph.org/file/50d92b448e1936c87112e-5930243aa039485387.jpg" alt="Bot Image">
+            <ul class="bot-list">
+                <li><a href="https://t.me/Madara7_chat_bot">Madara Chat Bot</a></li>
+            </ul>
         </div>
     </div>
 

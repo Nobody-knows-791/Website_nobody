@@ -12,6 +12,33 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Loading Animation */
+.loading {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-img {
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 header {
@@ -40,12 +67,13 @@ header p {
     border-radius: 20px;
     font-size: 1rem;
     cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .purple-btn:hover {
     transform: scale(1.05);
     background-color: #5a4bc6;
+    box-shadow: 0 0 15px rgba(108, 92, 231, 0.5);
 }
 
 section {
@@ -100,6 +128,14 @@ h3 {
     margin-bottom: 20px;
 }
 
+.about-me-img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(162, 155, 254, 0.3);
+}
+
 /* Friend Circle Section */
 .friend-circle {
     text-align: center;
@@ -151,11 +187,16 @@ h3 {
     padding: 8px 15px;
     border-radius: 20px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .tab.active {
     background: #6c5ce7;
     color: #fff;
+}
+
+.tab:hover {
+    background: #5a4bc6;
 }
 
 .work {
@@ -184,10 +225,15 @@ h3 {
     text-align: center;
 }
 
+.sticker {
+    margin-bottom: 20px;
+}
+
 .sticker img {
     border-radius: 10px;
     width: 100%;
     max-width: 300px;
+    margin-bottom: 10px;
 }
 
 /* Additional Section */
@@ -307,6 +353,28 @@ footer p {
     width: 100%;
     max-width: 200px;
     border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.bot-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.bot-list li {
+    margin: 10px 0;
+}
+
+.bot-list li a {
+    color: #a29bfe;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.bot-list li a:hover {
+    color: #5a4bc6;
 }
 
 .close {
