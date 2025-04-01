@@ -5,63 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sung Jin Woo</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto:wght@400;700&family=Poppins:wght@400;700&family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
     <!-- Loading Animation -->
     <div id="loading" class="loading">
-        <img src="https://i.ibb.co/5WqYk2L/loading-3d.png" alt="Loading" class="loading-img">
+        <img src="https://i.ibb.co/5WqYk2L/loading-3d-image.png" alt="Loading 3D Image" class="loading-image">
+    </div>
+
+    <!-- Scroll Down Icon -->
+    <div class="scroll-down">
+        <span>↓</span>
     </div>
 
     <!-- Header Section -->
     <header>
-        <h1>SUNG JIN WOO</h1>
-        <p>TELEGRAM NETWORK</p>
-        <button class="purple-btn" onclick="showLoading('about-modal')">About</button>
+        <div class="header-top">
+            <span class="site-name">Sung Jin Woo</span>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        </div>
+        <div class="header-text">
+            <p class="welcome-text">Welcome to</p>
+            <h1>SUNG JIN WOO NETWORK</h1>
+            <p class="telegram-text">TELEGRAM NETWORK</p>
+        </div>
     </header>
 
     <!-- About Me Section -->
-    <section class="about-me">
+    <section class="about-me" id="about">
         <h2>ABOUT ME</h2>
+        <button class="purple-btn" onclick="showLoading('about-modal')">About</button>
+        <img src="https://i.ibb.co/5WqYk2L/person-with-wine.jpg" alt="Person with Wine" class="about-me-image">
         <div class="about-details">
             <div class="detail-box">
+                <span class="icon">👤</span>
                 <p>NAME</p>
                 <p>Sung Jin Woo</p>
             </div>
             <div class="detail-box">
+                <span class="icon">🌍</span>
                 <p>COUNTRY, STATE</p>
                 <p>India, Haryana</p>
             </div>
             <div class="detail-box">
+                <span class="icon">📅</span>
                 <p>AGE</p>
                 <p>18</p>
             </div>
         </div>
         <p class="bio">Hello, Buddy! I Am Sung Jin Woo From Seoul. Creator Of The Sung Jin Woo Network.</p>
-        <img src="https://i.ibb.co/5WqYk2L/about-me-image.jpg" alt="About Me Image" class="about-me-img">
         <a href="https://t.me/Sung_jin_woo_79"><button class="purple-btn">Contact Me</button></a>
     </section>
 
     <!-- Friend Circle Section -->
-    <section class="friend-circle">
+    <section class="friend-circle" id="friend-circle">
         <h2>MY FRIEND CIRCLE</h2>
         <h3>SHADOW CIRCLE</h3>
-        <a href="https://t.me/Sung_jin_woo_79"><button class="purple-btn">See All</button></a>
-        <div class="member">
-            <img src="https://i.ibb.co/5WqYk2L/cha-hae-in.jpg" alt="Member Avatar">
-            <div class="member-info">
-                <h4>nobody_knows_792</h4>
-                <p>Partner in the Shadow Monarch Group. Managing Members.</p>
+        <a href="https://t.me/SUNG_JIN_WOO_791/60"><button class="purple-btn">See All</button></a>
+        <div class="member-container">
+            <div class="member active">
+                <img src="https://i.ibb.co/5WqYk2L/user-icon.png" alt="Member Avatar">
+                <div class="member-info">
+                    <h4>nobody_knows_792</h4>
+                    <p>Partner in the Shadow Monarch Group. Managing Members.</p>
+                </div>
             </div>
+            <div class="member">
+                <img src="https://i.ibb.co/5WqYk2L/user-icon.png" alt="Member Avatar">
+                <div class="member-info">
+                    <h4>Mazino (Rushil)</h4>
+                    <p>Owner of The Hell's Writing Group, Co-owner of TSS GC. Managing Members.</p>
+                </div>
+            </div>
+        </div>
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
         </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <h2>MY PORTFOLIO</h2>
         <h3>RECENT WORKS</h3>
         <div class="tabs">
-            <button class="tab active">ALL</button>
+            <button class="tab active" onclick="filterWorks('all')">ALL</button>
             <button class="tab" onclick="showLoading('channel-modal')">Channel</button>
             <button class="tab" onclick="showLoading('group-modal')">Group</button>
             <button class="tab" onclick="showLoading('bot-modal')">Bot</button>
@@ -69,14 +101,17 @@
         <div class="work" data-category="all channel">
             <img src="https://i.ibb.co/7WqYk2L/shadow-monarch-legacy.jpg" alt="Work Image">
             <p>Shadow Monarch Legacy Channel</p>
+            <a href="https://t.me/chilling_friends_support"><button class="purple-btn">Use Channel</button></a>
         </div>
         <div class="work" data-category="all group">
-            <img src="https://i.ibb.co/5WqYk2L/shadow-army.jpg" alt="Work Image">
+            <img src="https://graph.org/file/b8bf02d4196f9b00cd1a7-0f233b883728719f58.jpg" alt="Work Image">
             <p>Shadow Army Group</p>
+            <a href="https://t.me/+s4LqOJ1K5_s2NDc1"><button class="purple-btn">Use Group</button></a>
         </div>
         <div class="work" data-category="all bot">
-            <img src="https://i.ibb.co/5WqYk2L/igris-bot.jpg" alt="Work Image">
+            <img src="https://graph.org/file/50d92b448e1936c87112e-5930243aa039485387.jpg" alt="Work Image">
             <p>Igris Bot</p>
+            <a href="https://t.me/Sung_jin_woo_79"><button class="purple-btn">Use Bot</button></a>
         </div>
     </section>
 
@@ -99,22 +134,14 @@
         </div>
     </section>
 
-    <!-- Footer Navigation -->
-    <nav class="bottom-nav">
-        <a href="#home"><img src="https://i.ibb.co/5WqYk2L/home-icon.png" alt="Home Icon"></a>
-        <a href="#about"><img src="https://i.ibb.co/5WqYk2L/about-icon.png" alt="About Icon"></a>
-        <a href="#work"><img src="https://i.ibb.co/5WqYk2L/work-icon.png" alt="Work Icon"></a>
-        <a href="#team"><img src="https://i.ibb.co/5WqYk2L/team-icon.png" alt="Team Icon"></a>
-    </nav>
-
     <!-- Footer -->
     <footer>
         <h3>Sung Jin Woo</h3>
         <div class="footer-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#work">Work</a>
-            <a href="#team">Team</a>
+            <a href="#home" onclick="scrollToSection('home')">Home</a>
+            <a href="#about" onclick="scrollToSection('about')">About</a>
+            <a href="#portfolio" onclick="scrollToSection('portfolio')">Work</a>
+            <a href="#friend-circle" onclick="scrollToSection('friend-circle')">Team</a>
         </div>
         <div class="social-icons">
             <a href="instagram://user?username=nobody_knows_792" onclick="window.location.href='https://www.instagram.com/nobody_knows_792?igsh=MTFmY3FjcWgwOXRuNg=='"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
@@ -122,6 +149,14 @@
         </div>
         <p>© 2025 BY SUNG JIN WOO. ALL RIGHTS RESERVED.</p>
     </footer>
+
+    <!-- Fixed Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="#home" onclick="scrollToSection('home')"><img src="https://i.ibb.co/5WqYk2L/home-icon.png" alt="Home Icon"></a>
+        <a href="#about" onclick="scrollToSection('about')"><img src="https://i.ibb.co/5WqYk2L/person-icon.png" alt="Person Icon"></a>
+        <a href="#portfolio" onclick="scrollToSection('portfolio')"><img src="https://i.ibb.co/5WqYk2L/bag-icon.png" alt="Bag Icon"></a>
+        <a href="#" onclick="showLoading('bot-list-modal')"><img src="https://i.ibb.co/5WqYk2L/medal-icon.png" alt="Medal Icon"></a>
+    </nav>
 
     <!-- Modals -->
     <div id="about-modal" class="modal">
@@ -156,15 +191,48 @@
     <div id="bot-modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('bot-modal')">×</span>
-            <h2>Igris Bot</h2>
-            <p>Meet Igris, my loyal bot! Use it to get updates and interact with the community.</p>
+            <h2>Bots</h2>
+            <p>Meet my loyal bots! Use them to get updates and interact with the community.</p>
             <img src="https://graph.org/file/50d92b448e1936c87112e-5930243aa039485387.jpg" alt="Bot Image">
             <ul class="bot-list">
-                <li><a href="https://t.me/Madara7_chat_bot">Madara Chat Bot</a></li>
+                <li>Igris Bot - <a href="https://t.me/Sung_jin_woo_79">Try Now</a></li>
+                <li>Madara Chat Bot - <a href="https://t.me/Madara7_chat_bot">Try Now</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="bot-list-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('bot-list-modal')">×</span>
+            <h2>Bot List</h2>
+            <p>Explore all the bots in the Sung Jin Woo Network!</p>
+            <ul class="bot-list">
+                <li>Igris Bot - <a href="https://t.me/Sung_jin_woo_79">Try Now</a></li>
+                <li>Madara Chat Bot - <a href="https://t.me/Madara7_chat_bot">Try Now</a></li>
             </ul>
         </div>
     </div>
 
     <script src="script.js"></script>
+    <script>
+        // Particles.js Configuration
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: '#a29bfe' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: '#a29bfe', opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 6, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
+                modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+            },
+            retina_detect: true
+        });
+    </script>
 </body>
 </html>
