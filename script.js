@@ -7,6 +7,11 @@ window.onload = function() {
 
 function showLoading(modalId) {
     const loading = document.getElementById('loading');
+    // Skip loading for friend-circle section
+    if (modalId === 'friend-circle') {
+        document.getElementById(modalId).style.display = 'flex';
+        return;
+    }
     loading.style.display = 'flex';
     setTimeout(() => {
         loading.style.display = 'none';
@@ -74,3 +79,20 @@ function scrollToSection(sectionId) {
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+// Scroll Handling for Scroll Container
+window.addEventListener('scroll', () => {
+    const scrollDown = document.querySelector('.scroll-down');
+    const scrollUp = document.querySelector('.scroll-up');
+    const scrollContainer = document.querySelector('.scroll-container');
+    
+    if (window.scrollY > 100) {
+        scrollDown.style.display = 'none';
+        scrollUp.style.display = 'block';
+        scrollContainer.style.transform = `translateY(${window.scrollY / 2}px)`;
+    } else {
+        scrollDown.style.display = 'block';
+        scrollUp.style.display = 'none';
+        scrollContainer.style.transform = 'translateY(-50%)';
+    }
+});
