@@ -27,8 +27,15 @@ function toggleTheme() {
 }
 
 // Modal Functions
+function openAboutModal() {
+    document.getElementById('about-modal').style.display = 'flex';
+}
+
 function closeModal(modalId) {
-    document.getElementById(modalId).style.display = 'none';
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'none';
+    }
 }
 
 // Portfolio Filter
