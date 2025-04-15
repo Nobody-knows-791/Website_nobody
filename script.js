@@ -117,6 +117,7 @@ function scrollToTop() {
 // Scroll Navigation Animation
 const scrollUp = document.querySelector('.scroll-up');
 const scrollDown = document.querySelector('.scroll-down');
+const scrollIndicator = document.querySelector('.scroll-indicator');
 
 window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY;
@@ -144,4 +145,13 @@ scrollUp.addEventListener('click', () => {
 
 scrollDown.addEventListener('click', () => {
     window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+});
+
+// Scroll Indicator click event
+scrollIndicator.addEventListener('click', () => {
+    if (scrollUp.classList.contains('active')) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (scrollDown.classList.contains('active')) {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
 });
